@@ -1,16 +1,11 @@
 <!--
     Input:
-        manifest_apuware_apusys.xml
-        manifest_apuware_xrp.xml
-        manifest_apuware_utils.xml
-        manifest_apuware_hmp.xml
         manifest_sensor_hidl_v2.xml
         manifest_audio.xml
+        manifest_dsds.xml
         manifest_radioconfig.xml
         manifest_em.xml
-        manifest_bgservice.xml
         manifest_videotelephony.xml
-        manifest_km41.xml
         manifest_tee.xml
         manifest_trustonic.xml
         manifest_log.xml
@@ -26,10 +21,10 @@
         manifest_apmonitor.xml
         manifest_nwk_opt.xml
         manifest_composer.xml
-        manifest_target_level_r.xml
+        manifest_target_level_s.xml
         manifest.xml
 -->
-<manifest version="4.0" type="device" target-level="5">
+<manifest version="4.0" type="device" target-level="6">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -81,16 +76,6 @@
         <fqname>@1.0::IBootControl/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.camera.provider</name>
-        <transport>hwbinder</transport>
-        <version>2.6</version>
-        <interface>
-            <name>ICameraProvider</name>
-            <instance>internal/0</instance>
-        </interface>
-        <fqname>@2.6::ICameraProvider/internal/0</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -131,16 +116,6 @@
         <fqname>@4.0::IMapper/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.keymaster</name>
-        <transport>hwbinder</transport>
-        <version>4.1</version>
-        <interface>
-            <name>IKeymasterDevice</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@4.1::IKeymasterDevice/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.media.omx</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -156,14 +131,43 @@
         <fqname>@1.0::IOmxStore/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.memtrack</name>
+        <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.2</version>
         <interface>
-            <name>IMemtrack</name>
-            <instance>default</instance>
+            <name>IRadio</name>
+            <instance>em1</instance>
+            <instance>em2</instance>
+            <instance>imsAospSlot1</instance>
+            <instance>imsAospSlot2</instance>
+            <instance>se1</instance>
+            <instance>se2</instance>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
         </interface>
-        <fqname>@1.0::IMemtrack/default</fqname>
+        <interface>
+            <name>ISap</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+        <fqname>@1.2::IRadio/em1</fqname>
+        <fqname>@1.2::IRadio/em2</fqname>
+        <fqname>@1.2::IRadio/imsAospSlot1</fqname>
+        <fqname>@1.2::IRadio/imsAospSlot2</fqname>
+        <fqname>@1.2::IRadio/se1</fqname>
+        <fqname>@1.2::IRadio/se2</fqname>
+        <fqname>@1.2::IRadio/slot1</fqname>
+        <fqname>@1.2::IRadio/slot2</fqname>
+        <fqname>@1.2::ISap/slot1</fqname>
+        <fqname>@1.2::ISap/slot2</fqname>
+        <fqname>@1.6::IRadio/em1</fqname>
+        <fqname>@1.6::IRadio/em2</fqname>
+        <fqname>@1.6::IRadio/imsAospSlot1</fqname>
+        <fqname>@1.6::IRadio/imsAospSlot2</fqname>
+        <fqname>@1.6::IRadio/se1</fqname>
+        <fqname>@1.6::IRadio/se2</fqname>
+        <fqname>@1.6::IRadio/slot1</fqname>
+        <fqname>@1.6::IRadio/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio.config</name>
@@ -260,46 +264,6 @@
         <fqname>@2.0::IApmService/apm_hidl_service</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.apuware.apusys</name>
-        <transport>hwbinder</transport>
-        <version>2.1</version>
-        <interface>
-            <name>INeuronApusys</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.1::INeuronApusys/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.apuware.hmp</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IApuwareHmp</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IApuwareHmp/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.apuware.utils</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IApuwareUtils</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::IApuwareUtils/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.mediatek.hardware.apuware.xrp</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>INeuronXrp</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::INeuronXrp/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.atci</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -320,6 +284,16 @@
         <fqname>@2.2::IBluetoothAudioProvidersFactory/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.mediatek.hardware.camera.atms</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IATMs</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IATMs/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.mediatek.hardware.camera.bgservice</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
@@ -332,12 +306,12 @@
     <hal format="hidl">
         <name>vendor.mediatek.hardware.camera.isphal</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IISPModule</name>
             <instance>internal/0</instance>
         </interface>
-        <fqname>@1.0::IISPModule/internal/0</fqname>
+        <fqname>@1.1::IISPModule/internal/0</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.composer_ext</name>
@@ -443,6 +417,50 @@
         <fqname>@1.2::IMtkPower/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.mediatek.hardware.mtkradioex</name>
+        <transport>hwbinder</transport>
+        <version>3.0</version>
+        <interface>
+            <name>IMtkRadioEx</name>
+            <instance>imsSlot1</instance>
+            <instance>imsSlot2</instance>
+            <instance>mtkAssist1</instance>
+            <instance>mtkAssist2</instance>
+            <instance>mtkCap1</instance>
+            <instance>mtkCap2</instance>
+            <instance>mtkEm1</instance>
+            <instance>mtkEm2</instance>
+            <instance>mtkRcs1</instance>
+            <instance>mtkRcs2</instance>
+            <instance>mtkRsu1</instance>
+            <instance>mtkRsu2</instance>
+            <instance>mtkSe1</instance>
+            <instance>mtkSe2</instance>
+            <instance>mtkSlot1</instance>
+            <instance>mtkSlot2</instance>
+            <instance>mtkSmartRatSwitch1</instance>
+            <instance>mtkSmartRatSwitch2</instance>
+        </interface>
+        <fqname>@3.0::IMtkRadioEx/imsSlot1</fqname>
+        <fqname>@3.0::IMtkRadioEx/imsSlot2</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkAssist1</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkAssist2</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkCap1</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkCap2</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkEm1</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkEm2</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkRcs1</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkRcs2</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkRsu1</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkRsu2</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkSe1</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkSe2</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkSlot1</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkSlot2</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkSmartRatSwitch1</fqname>
+        <fqname>@3.0::IMtkRadioEx/mtkSmartRatSwitch2</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.mediatek.hardware.netdagent</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -515,5 +533,5 @@
     <sepolicy>
         <version>31.0</version>
     </sepolicy>
-    <kernel target-level="5"/>
+    <kernel target-level="6"/>
 </manifest>

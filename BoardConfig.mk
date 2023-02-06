@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/oneplus/pickle
+DEVICE_PATH := device/oneplus/ossi
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -46,7 +46,7 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_BOARD_PLATFORM := mt6895
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := OP5567L1,pickle
+TARGET_OTA_ASSERT_DEVICE := OP5567L1,ossi
 
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2

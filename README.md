@@ -1,7 +1,7 @@
 Device configuration for Oneplus 10R
 =========================================
 
-The Oneplus 10R (codenamed _"Pickle"_) is a high-end smartphone from Oneplus.
+The Oneplus 10R (codenamed _"ossi"_) is a high-end smartphone from Oneplus.
 
 Oneplus 10R was announced and release on April 2022.
 
@@ -29,7 +29,7 @@ Front camera | 16 MP, f/2.4, 26mm (wide), 1/3.09", 1.0µm
 
 ### BOARD_USES_RECOVERY_AS_BOOT
 
-Keep in mind, `pickle` has NO `recovery` partition.
+Keep in mind, `ossi` has NO `recovery` partition.
 Recovery is part of the boot partition, so it takes care of normal boot and recovery.
 
 **SO MAKE SURE YOU HAVE A BACKUP `boot.img`**
@@ -44,23 +44,23 @@ Basic instructions. From there you'll need to research.
    repo sync -j5 --current-branch --no-clone-bundle --no-tags
    ```
 
-1. Add this device tree to `device/oneplus/pickle`.
+1. Add this device tree to `device/oneplus/ossi`.
    ```
    mkdir -p device/oneplus
    cd device/oneplus
-   git clone https://github.com/oneplus-pickle-roms/android_device_oneplus_pickle-twrp.git pickle
+   git clone https://github.com/oneplus-ossi-roms/android_device_oneplus_ossi-twrp.git ossi
    cd ../..
    ```
 
 1. Try an `eng` build.
    ```
-   export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_pickle-eng
+   export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_ossi-eng
    make bootimage
    ```
 
-1. You should now be able to flash `out/target/product/pickle/boot.img`
+1. You should now be able to flash `out/target/product/ossi/boot.img`
    ```
-   cd out/target/product/pickle
+   cd out/target/product/ossi
    fastboot flash boot boot.img
    ```
 
@@ -68,7 +68,7 @@ Basic instructions. From there you'll need to research.
 
 #### 1. Flash *just* TWRP
 
-https://github.com/oneplus-pickle-roms/android_device_oneplus_pickle-twrp/releases
+https://github.com/oneplus-ossi-roms/android_device_oneplus_ossi-twrp/releases
 
 Find the `.img` files under a releases' assets.
 And flash like normal. `fastboot flash boot twrp-boot-xxx.img`

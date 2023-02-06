@@ -31,7 +31,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # with "_a" and "_b" variants in the device. Note that the vendor can add more
 # more partitions to this list for the bootloader and radio.
 
-# TODO: Virtual A/B partitions found on pickle's full OTA payload.
+# TODO: Virtual A/B partitions found on ossi's full OTA payload.
 AB_OTA_PARTITIONS := \
     my_product \
     my_engineering \
@@ -49,7 +49,7 @@ AB_OTA_PARTITIONS := \
     system_ext \
     vendor \
 
-# TODO: Normal A/B partitions found on pickle's full OTA payload.
+# TODO: Normal A/B partitions found on ossi's full OTA payload.
 AB_OTA_PARTITIONS += \
     audio_dsp \
     boot \
@@ -73,7 +73,7 @@ AB_OTA_PARTITIONS += \
     vbmeta_system \
     vbmeta_vendor \
 
-# TODO: Other A/B partitions found on pickle's partitions, but not full OTA.
+# TODO: Other A/B partitions found on ossi's partitions, but not full OTA.
 # AB_OTA_PARTITIONS += \
 #     vendor_boot \
 
