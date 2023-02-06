@@ -1,23 +1,31 @@
-TWRP device tree for OnePlus Nord 2T 5G (pickle)
-===============================================
+Device configuration for Oneplus 10R
+=========================================
 
-| Basic                   | Spec Sheet                                                                                                                     |
-| -----------------------:|:------------------------------------------------------------------------------------------------------------------------------ |
-| Codename                | `pickle`                                                                                                                        |
-| Device name             | `OP5567L1` (OnePlus Nord 2T 5G)                                                                                                |
-| Model names             | `CPH2399` "EU" global model<br/>`CPH2401` India model                                                                          |
-| CPU                     | Octa-core                                                                                                                      |
-| Chipset                 | MediaTek mt6895 Dimensity 1300 5G (6 nm) (mt6895Z_Z/CZA)                                                                       |
-| GPU                     | Mali-G77 MC9                                                                                                                   |
-| Memory                  | 8/12 GB RAM                                                                                                                    |
-| Shipped Android Version | Android 12.1 (OxygenOS 12.1)                                                                                                   |
-| Storage                 | 128/256 GB                                                                                                                     |
-| Battery                 | Li-Po 4500 mAh, non-removable                                                                                                  |
-| Display                 | AMOLED, 90Hz, HDR10+ 1080 x 2400 pixels, 20:9 ratio (~409 ppi density)                                                         |
-| Camera (Back)(Main)     | 50 MP, f/1.8, 24mm (wide), 1/1.56", 1.0µm, PDAF, OIS<br/>8 MP, f/2.2, 120˚ (ultrawide)<br/>2 MP, f/2.2, (monochrome)           |
-| Camera (Front)          | 32 MP, f/2.4, (wide), 1/2.8", 0.8µm                                                                                            |
+The Oneplus 10R (codenamed _"Pickle"_) is a high-end smartphone from Oneplus.
 
-![image](https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-nord-2t-5g-1.jpg)
+Oneplus 10R was announced and release on April 2022.
+
+## Device specifications
+
+Basic   | Spec Sheet
+-------:|:-------------------------
+CPU     | 4x2.85 GHz Cortex-A78 & 4x2.0 GHz Cortex-A55
+Chipset | Mediatek Dimensity 8100-Max (5 nm)
+GPU     | Mali-G610 MC6
+Memory  | 8 & 12 GB RAM
+Shipped Android Version | Oxygen OS 12(android-12)
+Storage | 128/256 GB (UFS 3.1)
+Battery | Non-removable Li-Po 4800/5000 mAh (QC 150W/80W)
+Dimension | 163.3 x 75.5 x 8.2 mm
+Display | 1080 x 2412 pixels, 6.7 inches (~394 ppi density)
+Rear camera 1 | 50 MP, f/1.8, 24mm (wide), 1/1.56", 1.0µm, PDAF, OIS
+Rear camera 2 | 8 MP, f/2.2, 15mm, 120˚ (ultrawide), 1/4.0", 1.12µm
+Rear camera 3 | 2 MP, f/2.4, (macro)
+Front camera | 16 MP, f/2.4, 26mm (wide), 1/3.09", 1.0µm
+
+## Device picture
+
+![Oneplus 10R](https://m.media-amazon.com/images/I/716uVx3Wr5L._SX679_.jpg "Oneplus 10R in Forest Green")
 
 ### BOARD_USES_RECOVERY_AS_BOOT
 
