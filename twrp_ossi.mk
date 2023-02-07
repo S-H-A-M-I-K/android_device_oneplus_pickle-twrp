@@ -38,3 +38,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # HACK: Set older build date
 # PRODUCT_PROPERTY_OVERRIDES += \
 #     ro.bootimage.build.date.utc=0
+
+# Hide ReFlash TWRP
+PRODUCT_PROPERTY_OVERRIDES += ro.twrp.vendor_boot=true
