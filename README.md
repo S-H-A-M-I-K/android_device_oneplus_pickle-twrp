@@ -32,7 +32,7 @@ Front camera | 16 MP, f/2.4, 26mm (wide), 1/3.09", 1.0µm
 Keep in mind, `ossi` has NO `recovery` partition.
 Recovery is part of the boot partition, so it takes care of normal boot and recovery.
 
-**SO MAKE SURE YOU HAVE A BACKUP `boot.img`**
+**SO MAKE SURE YOU HAVE A BACKUP `vendor_boot.img`**
 
 ### Building
 
@@ -71,7 +71,7 @@ Basic instructions. From there you'll need to research.
 https://github.com/oneplus-ossi-roms/android_device_oneplus_ossi-twrp/releases
 
 Find the `.img` files under a releases' assets.
-And flash like normal. `fastboot flash boot twrp-boot-xxx.img`
+And flash like normal. `fastboot flash vendor_boot twrp-boot-xxx.img`
 
 #### 2. Install the ramdisk
 
