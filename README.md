@@ -48,20 +48,20 @@ Basic instructions. From there you'll need to research.
    ```
    mkdir -p device/oneplus
    cd device/oneplus
-   git clone https://github.com/oneplus-ossi-roms/android_device_oneplus_ossi-twrp.git ossi
+   git clone https://github.com/shikiSenpai/android_device_oneplus_pickle-twrp -b twrp device/oneplus/ossi
    cd ../..
    ```
 
 1. Try an `eng` build.
    ```
    export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_ossi-eng
-   make bootimage
+   make vendorbootimage
    ```
 
-1. You should now be able to flash `out/target/product/ossi/boot.img`
+1. You should now be able to flash `out/target/product/ossi/vendorboot.img`
    ```
    cd out/target/product/ossi
-   fastboot flash boot boot.img
+   fastboot flash vendor_boot twrp_boot.img
    ```
 
 ### Experimental builds
