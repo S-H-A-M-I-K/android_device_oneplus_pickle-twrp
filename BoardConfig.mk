@@ -199,3 +199,4 @@ TW_EXCLUDE_APEX := false
 TW_NO_HAPTICS := false
 TW_Y_OFFSET := 115
 TW_H_OFFSET := -115
+TW_DEVICE_VERSION := GTCxprice and ShikiSenpai
