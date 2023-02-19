@@ -14,15 +14,20 @@
 # limitations under the License.
 #
 
-# Inherit from those products. Most specific first.
+# Configure base.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+
+# Configure core_64_bit.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-# Inherit from ossi device
+# Configure launch_with_vendor_ramdisk.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+
+# Configure emulated_storage.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
+# Device specific configs
 $(call inherit-product, device/oneplus/ossi/device.mk)
-
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/twrp/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ossi
