@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/oneplus/ossi
+DEVICE_PATH := device/oneplus/pickle
 
 #API 
 PRODUCT_SHIPPING_API_LEVEL := 31
