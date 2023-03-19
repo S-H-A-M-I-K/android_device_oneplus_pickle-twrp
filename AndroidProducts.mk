@@ -15,4 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_ossi.mk
+    $(LOCAL_DIR)/twrp_pickle.mk
+    
+COMMON_LUNCH_CHOICES := \
+    twrp_pickle-eng
